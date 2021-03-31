@@ -1,0 +1,32 @@
+body{
+  background-color:lightgreen;
+}
+
+h1{
+  color: darkmagenta;
+  font-size: 40px;
+  font-family: georgia serif;
+}
+
+p{
+  color:darkmagenta;
+  font-size: 20px;
+  font-family: georgia serif;
+}
+
+label{
+  font-size: 20px;
+}
+
+option{
+  font-size: 20px
+}
+
+button{
+  width: 500px;
+  height: 50px;
+  font-size:30px;
+  text-align: center;
+  background:darkmagenta;
+  color:white;
+}

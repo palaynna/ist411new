@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 3</title>
+
+  <link rel="stylesheet" href="module3.css">
+  <script src="module3.js"></script>
+</head>
+
+<body>
+  <h1>Palindrome Checker</h1>
+  <div class="flexrow">
+
+    <div class="flexcolumn">
+      <h2>Form to obtain a word and check if it is a palindrome:</h2>
+      <form name= "form">
+        Word to check: <input type="text" name="word" value="">
+        <br>
+        Use algorithm 1 or 2? <input type="number" name="number" value="">
+        <br>
+        <input type="button" value="Check and add to list" onclick="check()">
+      </form>
+    </div>
+
+    <div class="flexcolumn">
+      <h2>Algorithm 1</h2>
+      <table id="alg1"></table>
+      <br>
+      <input type="button" value="clear" onclick="clear1()">
+    </div>
+
+    <div class="flexcolumn">
+      <h2>Algorithm 2</h2>
+      <table id="alg2"></table>
+      <br>
+      <input type="button" value="clear" onclick="clear2()">
+    </div>
+
+  </div>
+</body>
+
+</html>

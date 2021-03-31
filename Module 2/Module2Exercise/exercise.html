@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width-device-width, initial scale-1">
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+
+  <body>
+    <h2>Flexbox Practice</h2>
+
+    <div class="flexrow">
+
+      <div class="flexcolumn" style="background-color: lightcoral">
+        <h2>Entry 1: a link</h2>
+        <p><a href="https://youtube.com" target="_blank">youtube</a></p>
+      </div>
+
+      <div class="flexcolumn" style="background-color: lightgoldenrodyellow">
+        <h2>Entry 2: an image</h2>
+        <p><img src="portraitpic.jpg" alt="Entry2Pic" style="width:50%"></p>
+      </div>
+
+      <div class="flexcolumn" style="background-color: lightgreen">
+        <h2>Entry 3: a video</h2>
+        <p><video width="50%" controls><source src="yt1s.com - Dream Sweet in Sea Major_v720P.mp4" type="video/mp4"></video></p>
+      </div>
+
+      <div class="flexcolumn" style="background-color: lightblue">
+      <h2>Entry 4:use of the Geolocation API</h2>
+        <button onclick="getLocation()">Click this to get your location</button>
+        <p id="map"></p>
+
+      <script>
+        var x =document.getElementById("map");
+        function getLocation(){
+          if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+          }else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        function showPosition(position){
+          x.innerHTML = "Latitude: "+position.coords.latitude+"<br>Longitude: "+position.coords.longitude;
+        }
+      </script>
+      </div>
+
+      </div>
+
+    </div>
+  </body>
+  
+</html>

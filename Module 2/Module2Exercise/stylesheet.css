@@ -1,0 +1,21 @@
+*{
+  box-sizing: border-box;
+}
+
+.flexrow{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexcolumn{
+  flex: 25%;
+  padding: 20px;
+}
+
+
+
+@media screen and (max-width: 600px){
+  .flexrow{
+    flex-direction: column;
+  }
+}

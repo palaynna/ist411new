@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <h1>RMMM Calculator</h1>
+    <p id="numbers"></p>
+
+    <label>Range low:</label>
+    <input name="low" id="low"/>
+    <br>
+
+    <label>Range high:</label>
+    <input name="high" id="high" />
+    <br>
+
+    <label>Other numbers:</label>
+    <input name="value" id="value" />
+    <button onclick="getvalue()"id="buttonvalue" >add</button>
+    <br>
+
+    <button onclick="calculate()">calculate</button>
+    <button onclick="document.location.reload(true)">clear</button>
+    <ul>
+      <li id="range">range:</li>
+      <li id="mean">mean:</li>
+      <li id="median">median:</li>
+      <li id="mode">mode:</li>
+    </ul>
+  </body>
+  <script>
+    array = []
+
+    function getvalue(){
+      input = document.getElementById("value").value
+      if(!isNaN(input)){
+        array.push(input)
+      }
+      console.log(array)
+      display = document.getElementById("numbers")
+      output = ""
+      for(i=0;i<array.length;i++){
+        output += array[i] + ' ';
+      }
+      console.log(output)
+      display.innerHTML = output
+    }
+
+    function calculate(){
+      newarray = []
+
+      high = parseInt(document.getElementById("high").value)
+      low = parseInt(document.getElementById("low").value)
+
+      range = high - low
+      document.getElementById("range").innerHTML = "range: " + range
+
+      for(i=0;i<array.length;i++){
+        newarray.push(parseInt(array[i]))
+      }
+      newarray.sort(function(a,b){return a-b})
+      
+      document.getElementById("value").disabled = true
+      document.getElementById("buttonvalue").disabled = true
+
+      sum = 0
+      console.log(newarray)
+      for (i = 0; i < newarray.length; i++){
+        sum += newarray[i]
+      }
+      mean = sum/newarray.length
+
+      document.getElementById("mean").innerHTML = "mean: " + mean
+
+      median = newarray[newarray.length / 2 | 0]
+      document.getElementById("median").innerHTML = "median: " + median
+    }
+
+    function clear(){
+      document.location.reload(true)
+    }
+  </script>
+
+</html>

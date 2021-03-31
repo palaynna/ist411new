@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <h1>Succulents Survey</h1>
+    <p>By: Alaynna Pedersen</p>
+    <br>
+  </head>
+
+  <body>
+    <form>
+      <label for="q1">Do you grow succulents?</label><br>
+      <input tyle="text" id="q1" name="q1"><br>
+      <br>
+
+      <label for="q2">What is you favorite type of succulent?</label><br>
+      <input tyle="text" id="q2" name="q2"><br>
+      <br>
+
+      <label for="q3">How many succulents do you have?</label><br>
+      <select id="q3" name="q3">
+        <option value="option0"></option>
+        <br>
+        <option value="option1">0</option>
+        <br>
+        <option value="option2">1-5</option>
+        <br>
+        <option value="option3">6-10</option>
+        <br>
+        <option value="option4">10-15</option>
+        <br>
+        <option value="option5">15-20</option>
+        <br>
+        <option value="option6">20+</option>
+        <br>
+      </select>
+      <br>
+
+      <br>
+
+      <label for="q4">How long have you grown succulents?</label><br>
+      <input type="radio" id="choice1" name="q4" value="choice1">
+      <label for="choice1">I never have grown succulents</label>
+      <br>
+      <input type="radio" id="choice2" name="q4" value="choice2">
+      <label for="choice2">1-5 years</label>
+      <br>
+      <input type="radio" id="choice3" name="q4" value="choice3">
+      <label for="choice3">6-15 years</label>
+      <br>
+      <input type="radio" id="choice4" name="q4" value="choice4">
+      <label for="choice4">16-20 years</label>
+      <br>
+      <input type="radio" id="choice5" name="q4" value="choice5">
+      <label for="choice5">20+ years</label>
+      <br>
+
+      <br>
+
+      <label>What made you decide to take care of succulents?</label><br>
+      <input type="checkbox" id="q5" name="box1">
+      <label for="box1">I like taking care of all plants</label>
+      <br>
+      <input type="checkbox" id="q5" name="box2">
+      <label for="box1">I just like succulents</label>
+      <br>
+      <input type="checkbox" id="q5" name="box3">
+      <label for="box1">They are easier to take care of than some plants</label>
+      <br>
+      <input type="checkbox" id="q5" name="box4">
+      <label for="box1">I don't have any</label>
+      <br>
+
+      <br>
+
+      <label for ="comments">Do you have any questions about succulents?</label><br>
+      <textarea id="comment" name="comment" rows="6" cols="50"></textarea>
+      <br>
+    </form>
+
+    <br>
+    <button type="button" onclick="alert('Survey submission successful!')" >Submit</button>
+
+  </body>
+</html>

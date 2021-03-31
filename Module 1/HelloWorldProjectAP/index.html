@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="stylesheet.css">
+
+   <script>
+      function yourName(){
+        var urName = document.getElementById("yn").value;
+        document.getElementById("greeting").innerHTML= `Welcome ${urName}!`;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Hello!</h1>
+
+    <form>
+      <label for="yn">What's your name?</label>
+      <input type="text" id="yn" name="yn">
+      <br>
+    </form>
+
+      <button type="button" onclick="yourName()">Press me</button>
+      <br>
+      <p id="greeting"></p>
+      
+      
+    
+  </body>
+</html>
